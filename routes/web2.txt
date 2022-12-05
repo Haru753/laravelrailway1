@@ -13,15 +13,11 @@ use App\Http\Controllers\PagesController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// CLONACIÓN para turno noche  
-//elimina base de datos ------------->>>    php artisan migrate:rollback
+// CLONACIÓN para turno noche 
 
 Route::get('/', [PagesController::class, 'fnIndex'])->name('xIndex');
 
-
-
-Route::get('/galeria/{numero?}', [PagesController::class, 'fnGaleria']) ->where('numero', '[0-9]+')-> name('xGaleria');
-    
+Route::get('/galeria/{numero?}', [PagesController::class, 'fnGaleria'])->where('numero', '[0-9]+')->name('xGaleria');
 
 Route::get('/lista', [PagesController::class, 'fnLista'])->name('xLista');
 
